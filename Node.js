@@ -4,3 +4,5 @@ class Node {
     this.nextNode = nextNode; // link to next node
   }
 }
+
+module.exports = Node;
