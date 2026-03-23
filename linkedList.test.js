@@ -39,4 +39,17 @@ test("tail returns the last node", () => {
 
   list.append("dog");
   list.prepend("cat");
+
+  expect(list.tail().value).toBe("dog");
+});
+
+test("at(index) returns the value of the index at which is passed in", () => {
+  const list = new LinkedList();
+  list.append("dog");
+  list.prepend("cat");
+  list.append("parrot");
+
+  expect(list.at(0).value).toBe("cat");
+  expect(list.at(1).value).toBe("dog");
+  expect(list.at(2).value).toBe("parrot");
 });
