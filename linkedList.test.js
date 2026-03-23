@@ -8,3 +8,12 @@ test("append adds a node to the end", () => {
   expect(list.listHead.value).toBe("dog");
   expect(list.listHead.nextNode.value).toBe("cat");
 });
+
+test("prepend adds a node to the start", () => {
+  const list = new LinkedList();
+  list.append("cat"); // current list: cat
+  list.prepend("dog"); // new head: dog
+
+  expect(list.listHead.value).toBe("dog");
+  expect(list.listHead.nextNode.value).toBe("cat");
+});
