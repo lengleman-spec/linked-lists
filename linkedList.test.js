@@ -17,3 +17,11 @@ test("prepend adds a node to the start", () => {
   expect(list.listHead.value).toBe("dog");
   expect(list.listHead.nextNode.value).toBe("cat");
 });
+
+test("size returns the number of nodes", () => {
+  const list = new LinkedList();
+
+  list.append("dog");
+  list.prepend("cat");
+  expect(list.size()).toBe(2);
+});
