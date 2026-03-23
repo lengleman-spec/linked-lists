@@ -25,3 +25,11 @@ test("size returns the number of nodes", () => {
   list.prepend("cat");
   expect(list.size()).toBe(2);
 });
+
+test("head returns the first node", () => {
+  const list = new LinkedList();
+
+  list.append("dog");
+  list.prepend("cat");
+  expect(list.head().value).toBe("cat");
+});
