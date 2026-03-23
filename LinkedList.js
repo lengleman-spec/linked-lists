@@ -92,6 +92,18 @@ class LinkedList {
     this.listHead = this.listHead.nextNode;
     return poppedNode.value;
   }
+
+  contains(value) {
+    let current = this.listHead; // start at beginning
+    while (current != null) {
+      if (current.value === value) {
+        return true;
+      }
+
+      current = current.nextNode;
+    }
+    return false;
+  }
 }
 
 module.exports = { LinkedList };
