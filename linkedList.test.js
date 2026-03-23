@@ -33,3 +33,10 @@ test("head returns the first node", () => {
   list.prepend("cat");
   expect(list.head().value).toBe("cat");
 });
+
+test("tail returns the last node", () => {
+  const list = new LinkedList();
+
+  list.append("dog");
+  list.prepend("cat");
+});
