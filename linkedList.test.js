@@ -53,3 +53,13 @@ test("at(index) returns the value of the index at which is passed in", () => {
   expect(list.at(1).value).toBe("dog");
   expect(list.at(2).value).toBe("parrot");
 });
+
+test("pop removes the head node and returns it", () => {
+  const list = new LinkedList();
+  list.append("dog");
+  list.prepend("cat");
+  list.append("parrot");
+
+  expect(list.pop()).toBe("cat");
+  expect(list.head().value).toBe("dog");
+});
