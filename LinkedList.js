@@ -31,13 +31,22 @@ class LinkedList {
     newNode.nextNode = this.listHead; // links new node to old 1st node
     this.listHead = newNode; // updates list's head to the new node
   }
-}
 
-// append(value)
-// create new Node with value
-// if list is empty: listHead = new Node; return
-// else: start at listHead, while current node has nextNode:
-// move to next node
-//current.nextNode = new Node
+  size() {
+    let counter = 0;
+    let current = this.listHead;
+
+    if (this.listHead === null) {
+      return 0;
+    }
+
+    while (current !== null) {
+      counter++;
+      current = current.nextNode;
+    }
+
+    return counter;
+  }
+}
 
 module.exports = { LinkedList };
