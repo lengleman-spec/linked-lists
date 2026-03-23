@@ -83,6 +83,15 @@ class LinkedList {
 
     return undefined;
   }
+
+  pop() {
+    if (this.listHead === null) {
+      return undefined;
+    }
+    const poppedNode = this.listHead;
+    this.listHead = this.listHead.nextNode;
+    return poppedNode.value;
+  }
 }
 
 module.exports = { LinkedList };
