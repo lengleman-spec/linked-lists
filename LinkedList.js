@@ -19,6 +19,18 @@ class LinkedList {
     }
     current.nextNode = newNode;
   }
+
+  prepend(value) {
+    const newNode = new Node(value);
+
+    if (!this.listHead) {
+      this.listHead = newNode;
+      return;
+    }
+
+    newNode.nextNode = this.listHead; // links new node to old 1st node
+    this.listHead = newNode; // updates list's head to the new node
+  }
 }
 
 // append(value)
