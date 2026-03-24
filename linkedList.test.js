@@ -73,3 +73,15 @@ test("contains checks if value exists and returns boolean", () => {
   expect(list.contains("dog")).toBe(true);
   expect(list.contains("snake")).toBe(false);
 });
+
+test("findIndex returns the index of a value if the value is there", () => {
+  const list = new LinkedList();
+  list.append("dog");
+  list.prepend("cat");
+  list.append("parrot");
+
+  expect(list.findIndex("cat")).toBe(0);
+  expect(list.findIndex("dog")).toBe(1);
+  expect(list.findIndex("parrot")).toBe(2);
+  expect(list.findIndex("snake")).toBe(null);
+});
