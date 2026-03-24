@@ -104,6 +104,22 @@ class LinkedList {
     }
     return false;
   }
+
+  findIndex(value) {
+    let current = this.listHead;
+    let index = 0;
+
+    while (current !== null) {
+      if (current.value === value) {
+        return index;
+      }
+
+      current = current.nextNode;
+      index++;
+    }
+
+    return null;
+  }
 }
 
 module.exports = { LinkedList };
