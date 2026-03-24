@@ -63,3 +63,13 @@ test("pop removes the head node and returns it", () => {
   expect(list.pop()).toBe("cat");
   expect(list.head().value).toBe("dog");
 });
+
+test("contains checks if value exists and returns boolean", () => {
+  const list = new LinkedList();
+  list.append("dog");
+  list.prepend("cat");
+  list.append("parrot");
+
+  expect(list.contains("dog")).toBe(true);
+  expect(list.contains("snake")).toBe(false);
+});
