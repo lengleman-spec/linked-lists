@@ -85,3 +85,12 @@ test("findIndex returns the index of a value if the value is there", () => {
   expect(list.findIndex("parrot")).toBe(2);
   expect(list.findIndex("snake")).toBe(null);
 });
+
+test("toString returns a string representing the whole list", () => {
+  const list = new LinkedList();
+  list.append("dog");
+  list.prepend("cat");
+  list.append("parrot");
+
+  expect(list.toString()).toBe("(cat) -> (dog) -> (parrot) -> null");
+});

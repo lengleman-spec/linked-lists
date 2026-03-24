@@ -120,6 +120,18 @@ class LinkedList {
 
     return null;
   }
+
+  toString() {
+    let current = this.listHead;
+    let result = "";
+
+    while (current !== null) {
+      result += "(" + current.value + ") -> ";
+      current = current.nextNode;
+    }
+    result += "null";
+    return result;
+  }
 }
 
 module.exports = { LinkedList };
